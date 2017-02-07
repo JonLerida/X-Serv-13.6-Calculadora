@@ -2,13 +2,16 @@
 
 
 import sys
-if(len(sys.argv) != 4): #Si el n argumentos es incorrecto, termino programa
-    sys.exit("Número incorrecto de argumentos. Prueba:\n calcu.py <operacion> <a> <b>")
+if(len(sys.argv) != 4):
+    # Si el n argumentos es incorrecto, termino programa
+    print("Número incorrecto de argumentos. Prueba:")
+    print("calcu.py <operacion> <a> <b>")
+    sys.exit()
 
 
-_,operacion, numero1, numero2 = sys.argv
-    #Con _, descartas el primer elemento de una lista-> es como llamarlo "_" y no usarlo mas
-    #lo podrias haber llamado  de cualquier otra forma
+_, operacion, numero1, numero2 = sys.argv
+    # Con _, descartas el primer elemento de una lista-> es como llamarlo "_" y no usarlo mas
+    # lo podrias haber llamado  de cualquier otra forma
 if (operacion == 'multi'):
     operacion = '*'
     resultado = float(numero1) * float(numero2)
